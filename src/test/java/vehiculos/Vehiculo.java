@@ -28,9 +28,15 @@ public class Vehiculo{
 
         Vehiculo.cantidadVehiculos++;
 
-        // Contabilizar las ventas por pais
-        int ventasPais = fabricante.getPais().getVenta();
-        fabricante.getPais().setVenta(++ventasPais);
+        // Contabilizar ventas
+        int ventas;
+        // Por fabricante
+        ventas = fabricante.getVenta();
+        fabricante.setVenta(++ventas);
+
+        // Por pais
+        ventas = fabricante.getPais().getVenta();
+        fabricante.getPais().setVenta(++ventas);
     }
 
     public String getPlaca(){
